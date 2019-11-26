@@ -1,0 +1,36 @@
+{
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "typescript.format.enable": false,
+    "typescript.validate.enable": false,
+    "javascript.format.enable": false,
+    "javascript.validate.enable": false,
+    "npm.packageManager": "yarn",
+    "eslint.packageManager": "yarn",
+    "eslint.autoFixOnSave": true,
+    "eslint.options": {
+        "configFile": ".eslintrc.js"
+    },
+    "eslint.validate": [
+        "javascript",
+        "vue"
+    ],
+    // Vue
+    "vetur.format.defaultFormatter.html": "none",
+    "vetur.format.defaultFormatter.js": "none",
+    // Shell
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+}
