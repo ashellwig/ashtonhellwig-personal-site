@@ -21,10 +21,6 @@ export default {
     imageSize () {
       return computeImageSize(this.$vuetify.breakpoint.name)
     }
-  },
-
-  mounted () {
-    console.log(this)
   }
 }
 </script>
