@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HomePage msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container>
+    <div class="home">
+      <v-layout text-center wrap>
+        <v-flex xs12>
+          <site-logo></site-logo>
+        </v-flex>
+
+        <v-flex mb-4>
+          <h1 class="display-2 font-weight-bold mb-3">
+            Ashton Hellwig
+          </h1>
+        </v-flex>
+      </v-layout>
+    </div>
+  </v-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomePage from '@/components/HomePage.vue'
+import SiteLogo from '@/components/SiteLogo.vue'
 
 export default {
   name: 'home',
   components: {
-    HomePage
+    SiteLogo
   }
 }
 </script>

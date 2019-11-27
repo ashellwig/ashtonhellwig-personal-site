@@ -12,7 +12,8 @@
     },
     "[javascript]": {
         "editor.formatOnSave": true,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "typescript.format.enable": false,
     "typescript.validate.enable": false,
@@ -29,6 +30,9 @@
         "vue"
     ],
     // Vue
+    "[vue]": {
+        "editor.tabSize": 2,
+    },
     "vetur.format.defaultFormatter.html": "none",
     "vetur.format.defaultFormatter.js": "none",
     // Shell

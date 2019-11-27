@@ -6,30 +6,24 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+        <site-logo></site-logo>
+      </div>
     </v-app-bar>
 
     <v-content>
-      <HomePage/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HomePage from '@/components/HomePage'
+import SiteLogo from '@/components/SiteLogo'
 
 export default {
   name: 'App',
 
   components: {
-    HomePage
+    SiteLogo
   },
 
   data: () => ({

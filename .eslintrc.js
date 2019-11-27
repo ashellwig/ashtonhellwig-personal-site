@@ -14,14 +14,21 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  overrides: [
-    {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)'
-      ],
-      env: {
-        mocha: true
-      }
+  overrides: [{
+    files: [
+      '**/__tests__/*.{j,t}s?(x)'
+    ],
+    env: {
+      mocha: true
     }
+  },
+  {
+    files: [
+      'src/util/compute-image-size.js'
+    ],
+    rules: {
+      'no-unreachable': ['warn']
+    }
+  }
   ]
 }
