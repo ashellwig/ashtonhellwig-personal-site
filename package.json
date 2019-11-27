@@ -1,6 +1,15 @@
 {
   "name": "ashtonhellwig-personal-site",
+  "description": "Personal site for Ashton Scott Hellwig",
   "version": "0.1.0",
+  "author": {
+    "name": "Ashton Hellwig",
+    "email": "ahellwig.dev@gmail.com",
+    "url": "https://ashtonhellwig.netlify.com"
+  },
+  "homepage": "https://ashtonhellwig.netlify.com",
+  "readme": "https://github.com/ashellwig/ashtonhellwig-personal-site/README.md",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
