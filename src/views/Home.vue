@@ -10,6 +10,7 @@
           <h1 class="display-2 font-weight-bold mb-3">
             Ashton Hellwig
           </h1>
+          <h2>Under contruction, returning soon...</h2>
         </v-flex>
       </v-layout>
     </div>
