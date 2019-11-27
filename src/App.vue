@@ -6,7 +6,13 @@
       dark
     >
       <div class="d-flex align-center">
-        <site-logo></site-logo>
+        <img
+          alt="AHellwig Logo"
+          class="shrink mr-2"
+          contain
+          src="/img/logo/logo.svg"
+          transition="scale-transition"
+          :width="imageWidth">
       </div>
     </v-app-bar>
 
@@ -17,17 +23,17 @@
 </template>
 
 <script>
-import SiteLogo from '@/components/SiteLogo'
+import { computeBannerImageSize } from '@/util/compute-image-size'
 
 export default {
   name: 'App',
 
-  components: {
-    SiteLogo
-  },
+  data: () => ({}),
 
-  data: () => ({
-    //
-  })
+  computed: {
+    imageWidth () {
+      return computeBannerImageSize(this.$vuetify.breakpoint.name)
+    }
+  }
 }
 </script>
