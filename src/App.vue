@@ -10,7 +10,7 @@
           alt="AHellwig Logo"
           class="shrink mr-2"
           contain
-          src="/img/logo/logo.svg"
+          src="/img/logo/logo-square.svg"
           transition="scale-transition"
           :width="imageWidth">
       </div>

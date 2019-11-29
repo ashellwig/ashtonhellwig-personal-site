@@ -9,15 +9,21 @@
     "url": "https://ashtonhellwig.netlify.com"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "start": "concurrently 'yarn start:client' 'yarn start:server'",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "vue-cli-service build --mode production --dest dist/client",
+    "build:server": "netlify-lambda build src/server -c vue.config.js",
+    "start:client": "vue-cli-service serve",
+    "start:server": "netlify-lambda serve src/server -c vue.config.js",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit --require @babel/register"
   },
   "dependencies": {
+    "@babel/cli": "^7.7.4",
     "@babel/polyfill": "^7.4.4",
     "@fortawesome/fontawesome-free": "^5.8.2",
     "core-js": "^3.3.2",
+    "pg": "^7.14.0",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
     "vue": "^2.6.10",
@@ -26,6 +32,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/register": "^7.7.4",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-pwa": "^4.0.5",
@@ -37,10 +45,16 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.3",
     "chai": "^4.1.2",
+    "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "emitter": "^0.0.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^9.4.2",
+    "netlify-lambda": "^1.6.3",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^2.0.1",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-vuetify": "^2.0.2",
     "vue-template-compiler": "^2.6.10"

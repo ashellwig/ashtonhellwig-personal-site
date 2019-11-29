@@ -1,0 +1,57 @@
+-- SCHEMA: social_profile
+
+DROP SCHEMA social_profile;
+
+CREATE SCHEMA social_profile
+    AUTHORIZATION postgres;
+
+-- TABLE: social_profile.social_profiles
+
+DROP TABLE social_profile.social_profiles
+
+CREATE TABLE social_profile.social_profiles
+(
+    title text COLLATE pg_catalog."default",
+    username text COLLATE pg_catalog."default",
+    icon_path text COLLATE pg_catalog."default",
+    link text COLLATE pg_catalog."default"
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE social_profile.social_profiles
+    OWNER to postgres;
+
+-- LinkedIn
+INSERT INTO social_profile.social_profiles (title, username, icon_path, link)
+VALUES
+(
+    'LinkedIn',
+    '/in/ahellwig',
+    '/img/social-logos/linkedin/for-screen/2-Color/Logo-2C-128px-R.png',
+    'https://linkedin.com/in/ahellwig'
+);
+
+-- Twitter
+INSERT INTO social_profile.social_profiles (title, username, icon_path, link)
+VALUES
+(
+    'Twitter',
+    '@hellwigashton',
+    '/img/social-logos/twitter/Twitter_Logo_Blue/Twitter_Logo_Blue.png',
+    'https://twitter.com/hellwigashton'
+)
+
+-- GitHub
+INSERT INTO social_profile.social_profiles (title, username, icon_path, link)
+VALUES
+(
+    'GitHub'
+    '@ashellwig'
+    'images/social-logos/github/GitHub-Logos/GitHub_Logo.png',
+    'https://github.com/ashellwig'
+)
+
+--
