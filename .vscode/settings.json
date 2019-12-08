@@ -1,7 +1,15 @@
 {
+    // Editor Look and Feel
+    "editor.colorDecorators": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [80, 100, 120],
+    "editor.wordWrap": "off",
     "files.associations": {
         "*.js": "javascript"
     },
+    // File Management
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
