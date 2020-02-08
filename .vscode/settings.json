@@ -55,5 +55,7 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/node_modules": true
-    }
+    },
+    // Spell Checker
+    "cSpell.allowCompoundWords": true
 }
