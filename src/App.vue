@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
+    a<v-app-bar
       app
       color="primary"
       dark
@@ -10,9 +10,10 @@
           alt="AHellwig Logo"
           class="shrink mr-2"
           contain
-          src="/img/logo/logo-square.svg"
+          src="./assets/logo-round.png"
           transition="scale-transition"
-          :width="imageWidth">
+          :width="imageWidth"
+          >
       </div>
     </v-app-bar>
 

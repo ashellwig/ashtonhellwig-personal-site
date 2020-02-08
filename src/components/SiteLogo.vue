@@ -3,7 +3,7 @@
     <v-img class="image"
       :height="imageSize"
       :width="imageSize"
-      src="/img/logo/logo-square.svg"
+      src="../assets/logo-round.png"
       alt="AHellwig Logo" />
       <br>
   </div>
