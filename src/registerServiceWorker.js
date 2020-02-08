@@ -10,7 +10,12 @@ if (process.env.NODE_ENV === 'production') {
         'For more details, visit https://goo.gl/AFskqB'
       )
     },
-    registered () {
+    registered (registration) {
+      // Check hourly for updates
+      setInterval(() => {
+        registration.update()
+      }, 1000 * 60 * 60)
+
       if (process.NODE_ENV === 'development') {
         console.log('Service worker has been registered.')
       }
@@ -25,6 +30,7 @@ if (process.env.NODE_ENV === 'production') {
       document.dispatchEvent(
         new CustomEvent('swUpdated', { detail: registration })
       )
+
       if (process.env.NODE_ENV === 'development') {
         console.log('New content is available; please refresh.')
       }
