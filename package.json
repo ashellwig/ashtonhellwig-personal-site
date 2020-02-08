@@ -1,19 +1,22 @@
 {
   "name": "ashtonhellwig-personal-site",
   "version": "0.1.0",
-  "private": true,
   "description": "Personal site for Ashton Scott Hellwig",
   "author": {
     "name": "Ashton Hellwig",
     "email": "ahellwig.dev@gmail.com",
     "url": "https://ashtonhellwig.netlify.com"
   },
+  "homepage": "https://ashtonhellwig.netlify.com",
+  "readme": "https://github.com/ashellwig/ashtonhellwig-personal-site/README.md",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "concurrently 'yarn start:client' 'yarn start:server'",
     "build": "yarn build:client && yarn build:server",
     "build:client": "vue-cli-service build --mode production --dest dist/client",
     "build:server": "netlify-lambda build src/server -c vue.config.js",
-    "start:client": "vue-cli-service serve",
+    "start:client": "vue-cli-service serve --mode development",
     "start:server": "netlify-lambda serve src/server -c vue.config.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --require @babel/register"
@@ -62,13 +65,10 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "homepage": "https://ashtonhellwig.netlify.com",
-  "license": "MIT",
   "lint-staged": {
     "*.{js,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "readme": "https://github.com/ashellwig/ashtonhellwig-personal-site/README.md"
+  }
 }
